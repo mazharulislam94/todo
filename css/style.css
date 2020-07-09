@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header h1 {
+  font-weight: 400;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+}
+
+form button {
+  color: #fda085;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #fda085;
+  color: #fff;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  background: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.completed-btn,
+.trash-btn {
+  background: #ff6f47;
+  border: none;
+  padding: 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.completed-btn {
+  background: #00e676;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+  -moz-transform: translateY(8rem) rotateZ(20deg);
+  -ms-transform: translateY(8rem) rotateZ(20deg);
+  -o-transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select {
+  position: relative;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff6f47;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: #fff;
+  color: #fda085;
+}
